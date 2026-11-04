@@ -76,15 +76,7 @@
     }
     </script>
 <!-- END GOOGLE ANALYTICS 4 CODE -->
-<script type="text/x-magento-init">
-        {
-            "*": {
-                "Magento_PageCache/js/form-key-provider": {
-                    "isPaginationCacheEnabled":
-                        0                }
-            }
-        }
-    </script>
+
 <script type="text/javascript">
         WebFontConfig = {
             google: { families: ["Oswald:900,400:latin","Roboto:400:latin&display=swap"] }
@@ -109,29 +101,7 @@
         }
     }
 </script>
-<div class="cookie-status-message" id="cookie-status">
-    The store will not work correctly in the case when cookies are disabled.</div>
-<script type="text/javascript">document.querySelector("#cookie-status").style.display = "none";</script>
-<script type="text/x-magento-init">
-    {
-        "*": {
-            "cookieStatus": {}
-        }
-    }
-</script>
-<script type="text/x-magento-init">
-    {
-        "*": {
-            "mage/cookies": {
-                "expires": null,
-                "path": "\u002F",
-                "domain": ".ethosintelligence.com",
-                "secure": true,
-                "lifetime": "999999"
-            }
-        }
-    }
-</script>
+
 <noscript>
 <div class="message global noscript">
 <div class="content">
@@ -144,15 +114,6 @@
 </div>
 </noscript>
 <script>
-    window.cookiesConfig = window.cookiesConfig || {};
-    window.cookiesConfig.secure = true;
-</script><script>    require.config({
-        map: {
-            '*': {
-                wysiwygAdapter: 'mage/adminhtml/wysiwyg/tiny_mce/tinymce5Adapter'
-            }
-        }
-    });</script><script>
     require.config({
         paths: {
             googleMaps: 'https\u003A\u002F\u002Fmaps.googleapis.com\u002Fmaps\u002Fapi\u002Fjs\u003Fv\u003D3\u0026key\u003D'
@@ -218,103 +179,7 @@
 <h1 class="page-title">
 <span class="base" data-ui-id="page-title-wrapper">Contact Us</span> </h1>
 </div>
-<div class="page messages"><div data-placeholder="messages"></div>
-<div data-bind="scope: 'messages'">
-<!-- ko if: cookieMessages && cookieMessages.length > 0 -->
-<div aria-atomic="true" class="messages" data-bind="foreach: { data: cookieMessages, as: 'message' }" role="alert">
-<div data-bind="attr: {
-            class: 'message-' + message.type + ' ' + message.type + ' message',
-            'data-ui-id': 'message-' + message.type
-        }">
-<div data-bind="html: $parent.prepareMessageForHtml(message.text)"></div>
-</div>
-</div>
-<!-- /ko -->
-<!-- ko if: messages().messages && messages().messages.length > 0 -->
-<div aria-atomic="true" class="messages" data-bind="foreach: {
-        data: messages().messages, as: 'message'
-    }" role="alert">
-<div data-bind="attr: {
-            class: 'message-' + message.type + ' ' + message.type + ' message',
-            'data-ui-id': 'message-' + message.type
-        }">
-<div data-bind="html: $parent.prepareMessageForHtml(message.text)"></div>
-</div>
-</div>
-<!-- /ko -->
-</div>
-<script type="text/x-magento-init">
-    {
-        "*": {
-            "Magento_Ui/js/core/app": {
-                "components": {
-                        "messages": {
-                            "component": "Magento_Theme/js/view/messages"
-                        }
-                    }
-                }
-            }
-    }
-</script>
-</div><div class="columns"><div class="column main"><input name="form_key" type="hidden" value="McUdIPTQyiIH0wOu"/><div data-bind="scope:'authenticationPopup', style: {display: 'none'}" id="authenticationPopup">
-<script>window.authenticationPopup = {"autocomplete":"off","customerRegisterUrl":"https:\/\/ethosintelligence.com\/customer\/account\/create\/","customerForgotPasswordUrl":"https:\/\/ethosintelligence.com\/customer\/account\/forgotpassword\/","baseUrl":"https:\/\/ethosintelligence.com\/","customerLoginUrl":"https:\/\/ethosintelligence.com\/customer\/ajax\/login\/"}</script> <!-- ko template: getTemplate() --><!-- /ko -->
-<script type="text/x-magento-init">
-        {
-            "#authenticationPopup": {
-                "Magento_Ui/js/core/app": {"components":{"authenticationPopup":{"component":"WeltPixel_SocialLogin\/js\/view\/authentication-popup","children":{"messages":{"component":"Magento_Ui\/js\/view\/messages","displayArea":"messages"},"captcha":{"component":"Magento_Captcha\/js\/view\/checkout\/loginCaptcha","displayArea":"additional-login-form-fields","formId":"user_login","configSource":"checkout"}}}}}            },
-            "*": {
-                "Magento_Ui/js/block-loader": "https\u003A\u002F\u002Fethosintelligence.com\u002Fstatic\u002Ffrontend\u002FEthos\u002Fpearl\u002Fen_US\u002Fimages\u002Floader\u002D1.gif"
-                            }
-        }
-    </script>
-</div>
-<script type="text/x-magento-init">
-    {
-        "*": {
-            "Magento_Customer/js/section-config": {
-                "sections": {"stores\/store\/switch":["*"],"stores\/store\/switchrequest":["*"],"directory\/currency\/switch":["*"],"*":["messages"],"customer\/account\/logout":["*","recently_viewed_product","recently_compared_product","persistent"],"customer\/account\/loginpost":["*"],"customer\/account\/createpost":["*"],"customer\/account\/editpost":["*"],"customer\/ajax\/login":["checkout-data","cart","captcha"],"catalog\/product_compare\/add":["compare-products","gtm"],"catalog\/product_compare\/remove":["compare-products"],"catalog\/product_compare\/clear":["compare-products"],"sales\/guest\/reorder":["cart"],"sales\/order\/reorder":["cart"],"checkout\/cart\/add":["cart","directory-data","gtm","wp_confirmation_popup"],"checkout\/cart\/delete":["cart","gtm"],"checkout\/cart\/updatepost":["cart"],"checkout\/cart\/updateitemoptions":["cart"],"checkout\/cart\/couponpost":["cart"],"checkout\/cart\/estimatepost":["cart"],"checkout\/cart\/estimateupdatepost":["cart"],"checkout\/onepage\/saveorder":["cart","checkout-data","last-ordered-items"],"checkout\/sidebar\/removeitem":["cart","gtm"],"checkout\/sidebar\/updateitemqty":["cart"],"rest\/*\/v1\/carts\/*\/payment-information":["cart","last-ordered-items","captcha","instant-purchase","gtm"],"rest\/*\/v1\/guest-carts\/*\/payment-information":["cart","captcha","gtm"],"rest\/*\/v1\/guest-carts\/*\/selected-payment-method":["cart","checkout-data"],"rest\/*\/v1\/carts\/*\/selected-payment-method":["cart","checkout-data","instant-purchase"],"customer\/address\/*":["instant-purchase"],"customer\/account\/*":["instant-purchase"],"vault\/cards\/deleteaction":["instant-purchase"],"multishipping\/checkout\/overviewpost":["cart"],"paypal\/express\/placeorder":["cart","checkout-data"],"paypal\/payflowexpress\/placeorder":["cart","checkout-data"],"paypal\/express\/onauthorization":["cart","checkout-data"],"persistent\/index\/unsetcookie":["persistent"],"review\/product\/post":["review"],"wishlist\/index\/add":["wishlist","gtm"],"wishlist\/index\/remove":["wishlist"],"wishlist\/index\/updateitemoptions":["wishlist"],"wishlist\/index\/update":["wishlist"],"wishlist\/index\/cart":["wishlist","cart","gtm"],"wishlist\/index\/fromcart":["wishlist","cart"],"wishlist\/index\/allcart":["wishlist","cart","gtm"],"wishlist\/shared\/allcart":["wishlist","cart"],"wishlist\/shared\/cart":["cart"],"braintree\/paypal\/placeorder":["cart","checkout-data"],"braintree\/googlepay\/placeorder":["cart","checkout-data"],"checkout\/cart\/configure":["gtm"],"rest\/*\/v1\/guest-carts\/*\/shipping-information":["gtm"],"rest\/*\/v1\/carts\/*\/shipping-information":["gtm"],"weltpixel_quickview\/index\/updatecart":["cart"],"sociallogin\/account\/login":["*"],"sociallogin\/account\/loginpost":["*"]},
-                "clientSideSections": ["checkout-data","cart-data"],
-                "baseUrls": ["https:\/\/ethosintelligence.com\/"],
-                "sectionNames": ["messages","customer","compare-products","last-ordered-items","cart","directory-data","captcha","instant-purchase","loggedAsCustomer","persistent","review","wishlist","gtm","wp_confirmation_popup","recently_viewed_product","recently_compared_product","product_data_storage","paypal-billing-agreement"]            }
-        }
-    }
-</script>
-<script type="text/x-magento-init">
-    {
-        "*": {
-            "Magento_Customer/js/customer-data": {
-                "sectionLoadUrl": "https\u003A\u002F\u002Fethosintelligence.com\u002Fcustomer\u002Fsection\u002Fload\u002F",
-                "expirableSectionLifetime": 60,
-                "expirableSectionNames": ["cart","persistent"],
-                "cookieLifeTime": "999999",
-                "updateSessionUrl": "https\u003A\u002F\u002Fethosintelligence.com\u002Fcustomer\u002Faccount\u002FupdateSession\u002F"
-            }
-        }
-    }
-</script>
-<script type="text/x-magento-init">
-    {
-        "*": {
-            "Magento_Customer/js/invalidation-processor": {
-                "invalidationRules": {
-                    "website-rule": {
-                        "Magento_Customer/js/invalidation-rules/website-rule": {
-                            "scopeConfig": {
-                                "websiteId": "1"
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-</script>
-<script type="text/x-magento-init">
-    {
-        "body": {
-            "pageCache": {"url":"https:\/\/ethosintelligence.com\/page_cache\/block\/render\/","handles":["default","contact_index_index","weltpixel_custom_header_v4","weltpixel_custom_header_globalpromo_abovemenu","weltpixel_design_elements_bootstrap_grid","weltpixel_design_elements_fonts_core","weltpixel_design_elements_fonts_extended","weltpixel_design_elements_bootstrap_tables","weltpixel_design_elements_toggles_accordions_tabs","weltpixel_design_elements_pricing_boxes","weltpixel_design_elements_headings_blockquotes","weltpixel_design_elements_dividers","weltpixel_design_elements_brand_lists","weltpixel_design_elements_responsive_helpers","weltpixel_design_elements_alert_boxes","weltpixel_design_elements_testimonials","weltpixel_design_elements_flexslider","weltpixel_design_elements_buttons","weltpixel_design_elements_sections","weltpixel_design_elements_parallax","weltpixel_design_elements_animations_core","weltpixel_design_elements_btt_button","weltpixel_googlecards_remove_opengraph","weltpixel_googlecards_remove_schema","weltpixel_quickcart_sidebar","weltpixel_speedoptimization_remove_printcss"],"originalRequest":{"route":"contact","controller":"index","action":"index","uri":"\/contact"},"versionCookieName":"private_content_version"}        }
-    }
-</script>
+<div class="columns"><div class="column main">
 <div class="contact-v2">
 <div class="center">
 <img class="top-image" src="media/weltpixel/frontend_options/default/contact-hero.jpg"/>
@@ -331,7 +196,7 @@
 <a class="gray-phone" href="tel:208-718-1588">PHONE: 208-718-1588</a>
 </div>
 </div>
-<div class="col-md-4 border-contact" icon-4x"="" style="&gt;&lt;i class=">
+<div class="col-md-4 border-contact" icon-4x="" style="&gt;&lt;i class=">
 <div class="details" style="padding-top:20px;">
 <img alt="Private Investigators Association of Idaho" src="media/wysiwyg/ethos/private-investigators-association-of-idaho-logo-black.png"/>
 </div>
@@ -369,43 +234,6 @@ const submitStatus = params.get('submit');
 if (submitStatus === "true") {
     alert("Thank you for contacting us. We will be in touch with you shortly.");
 }
-
-const form = document.getElementById('form');
-const submitBtn = form.querySelector('button[type="submit"]');
-
-form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-    formData.append("access_key", "13839763-517d-4529-8445-7b23e929075d");
-
-    const originalText = submitBtn.textContent;
-
-    submitBtn.textContent = "Sending...";
-    submitBtn.disabled = true;
-
-    try {
-        const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData
-        });
-
-        const data = await response.json();
-
-        if (response.ok) {
-            alert("Success! Your message has been sent.");
-            form.reset();
-        } else {
-            alert("Error: " + data.message);
-        }
-
-    } catch (error) {
-        alert("Something went wrong. Please try again.");
-    } finally {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-    }
-});
 -->
 </script>
 <form action="https://api.web3forms.com/submit" class="form contact contact_frm_wpx" data-hasrequired="* Required Fields" data-mage-init='{"validation":{}}' id="contact-form" method="post">
@@ -495,20 +323,7 @@ form.addEventListener('submit', async (e) => {
 </div>
 </div>
 </div>
-</div><style></style></div></footer><script type="text/x-magento-init">
-        {
-            "*": {
-                "Magento_Ui/js/core/app": {
-                    "components": {
-                        "storage-manager": {
-                            "component": "Magento_Catalog/js/storage-manager",
-                            "appendTo": "",
-                            "storagesConfiguration" : {"recently_viewed_product":{"requestConfig":{"syncUrl":"https:\/\/ethosintelligence.com\/catalog\/product\/frontend_action_synchronize\/"},"lifetime":"1000","allowToSendRequest":null},"recently_compared_product":{"requestConfig":{"syncUrl":"https:\/\/ethosintelligence.com\/catalog\/product\/frontend_action_synchronize\/"},"lifetime":"1000","allowToSendRequest":null},"product_data_storage":{"updateRequestConfig":{"url":"https:\/\/ethosintelligence.com\/rest\/default\/V1\/products-render-info"},"requestConfig":{"syncUrl":"https:\/\/ethosintelligence.com\/catalog\/product\/frontend_action_synchronize\/"},"allowToSendRequest":null}}                        }
-                    }
-                }
-            }
-        }
-</script>
+</div><style></style></div></footer>
 <script>
 require(['jquery', 'designelements_base' ],
 function   ($, SEMICOLONBASE) {
@@ -556,41 +371,7 @@ function   ($, SEMICOLONBASE) {
             });
         });
 </script>
-<script>
-    require(['jquery', 'wpProductLabels'], function($, wpProductLabels){
-        $(document).ready(function() {
-            var requestUrl = 'https://ethosintelligence.com/wpproductlabels/product/index/';
-            wpProductLabels.init(requestUrl);
-            $(document).trigger("wpproductlabels:init");
-        });
-    });
-</script> <script>
-        window.openMinicart = '1';
-        window.shouldOpenMinicart = '1';
-        window.openMinicartDisplayOptions = 'both';
-        requirejs(['jquery', 'weltpixel_quickcart' ], function($, quickcart) {
-            $(document).ready(function() {
-                var mobileBreakpoint = 768;
-                quickcart.initialize(mobileBreakpoint);
-            });
-        });
-    </script>
-<script>
-    requirejs(['jquery', 'weltpixel_quickview' ],
-        function   ($, quickview) {
-            $(document).ready(function() {
-                $('.weltpixel-quickview').bind('click', function() {
-                    var prodUrl = $(this).attr('data-quickview-url');
-                    if (prodUrl.length) {
-                        quickview.displayContent(prodUrl);
-                        return false;
-                    }
-                });
-            });
-        });
 
-    window.weltpixel_quickview = {"baseUrl":"https:\/\/ethosintelligence.com\/","closeSeconds":"5","showMiniCart":"1","showShoppingCheckoutButtons":"1","popupMainClass":"mfp-popup-fadeInRight wp-quickview-popup","closeOnBgClick":true};
-</script>
 <style scoped="">
     .mfp-bg {
         opacity: 0.8;
